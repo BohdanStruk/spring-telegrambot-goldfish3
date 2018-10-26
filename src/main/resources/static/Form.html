@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+
+</head>
+<body>
+<div class="itemsScreen">
+    <div>
+        <div class="img-logo">
+            <img src="image/ryba_logo_180.png" alt="" class="main-logo">
+        </div>
+        <div class="text-logo">
+            <p class="gold-logo">Gold</p>
+            <p class="fish-logo">Fish</p>
+        </div>
+
+
+        <div class="modal3" id="loginModal">
+            <div class="modal-content3">
+                <div class="container2">
+                    <div class="row col-md-push-12">
+                        <div class="modal-header1">
+                            <div class="lableHolder2">
+                                <div class="page">
+                                    <div class="page__demo">
+                                        <label class="whiteText field a-field a-field_a1 page__field" >
+                                            <input class="field__input" placeholder="." required>
+                                            <span class="field__label-wrap">
+                                <span class="field__label">Name</span>
+                                </span>
+                                        </label>
+                                        <div>
+                                        <label class="whiteText field a-field a-field_a1 page__field">
+                                            <input class="field__input"  placeholder="." required>
+                                            <span class="field__label-wrap">
+                                <span class="field__label">Last Name</span>
+                                </span>
+                                        </label>
+                                        </div>
+                                        <div>
+                                            <label class="whiteText field a-field a-field_a1 page__field">
+                                                <input class="field__input"  placeholder="." required>
+                                                <span class="field__label-wrap">
+                                <span class="field__label">Address</span>
+                                </span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="whiteText field a-field a-field_a1 page__field">
+                                                <input class="field__input"  placeholder="." required>
+                                                <span class="field__label-wrap">
+                                <span class="field__label">Phone Number</span>
+                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="nextButton2 ripple" id="loginButton1">Add to form</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src='js/scripts.js'></script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    let serverUrl = 'https://377eca3a.ngrok.io/';
+    $(document).ready(function () {
+
+        $.ajax({
+            url: serverUrl + 'users',
+            method:'GET',
+            dataType:'json',
+            contentType:'application/json',
+            success: function (response) {
+                console.log(response);
+            }
+        })
+        $('#logInForm').submit(function (e) {
+            e.preventDefault();
+            let name = $('#name').val();
+            let last = $('#lastName').val();
+            let address = $('#address').val();
+            let phone = $('#phoneNumber').val();
+            let user = {
+                first_name: name,
+                last_name: last,
+                address: address,
+                phone_number: phone
+            };
+            $.ajax({
+                url: serverUrl + 'users/add',
+                method:'POST',
+                dataType:'json',
+                contentType:'application/json',
+                data:JSON.stringify(user),
+                complete: function (data) {
+                    console.log(data);
+                    if(data.status == 500){
+                        console.log('Error happened');
+                    }
+                    if(data.status == 201){
+                        $('#logInForm')[0].reset();
+                    }
+                }
+            })
+        });
+
+    });
+
+</script>
+</body>
+</html>

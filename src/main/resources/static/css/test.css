@@ -1,0 +1,172 @@
+
+body{
+
+    overflow: hidden;
+    font-family: 'HelveticaNeue-Thin', 'Montserrat', 'Helvetica Neue Thin', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    color: #FFF;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#044fab+1,21d6d3+100 */
+    background: #044fab; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjMDQ0ZmFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxZDZkMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(45deg, #044fab 1%, #21d6d3 100%); /* FF3.6-15 */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%, #044fab), color-stop(100%, #21d6d3)); /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(45deg, #044fab 1%, #21d6d3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, #044fab 1%, #21d6d3 100%); /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(45deg, #044fab 1%, #21d6d3 100%); /* IE10 preview */
+    background: linear-gradient(45deg, #044fab 1%, #21d6d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#044fab', endColorstr='#21d6d3', GradientType=1); /* IE6-8 fallback on horizontal gradient */
+}
+
+.itemsScreen{
+
+    width: 100vw;
+    height: 100vh;
+    font-family: 'HelveticaNeue-Thin', 'Montserrat', 'Helvetica Neue Thin', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#044fab', endColorstr='#21d6d3', GradientType=1); /* IE6-8 fallback on horizontal gradient */
+
+
+}
+
+.text-logo {
+    margin-left:40px;
+    position: absolute;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.img-logo{
+    position: absolute;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gold-logo{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'HelveticaNeue-Thin', 'Montserrat', 'Helvetica Neue Thin', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    color: #ffcc33;
+    margin-top: 105px;
+}
+
+.fish-logo {
+    font-size: 22px;
+    font-family: 'HelveticaNeue-Thin', 'Montserrat', 'Helvetica Neue Thin', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    color: #ffcc33;
+    margin-top: 105px;
+}
+.main-logo{
+    width: 70%;
+    height: auto;
+    display: block;
+    text-align: center;
+
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: #9098a9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+}
+
+.inp .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #07f;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+
+.inp input {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 12px 0;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #c8ccd4;
+    background: none;
+    border-radius: 0;
+    color: #223254;
+    transition: all 0.15s ease;
+}
+
+.inp input:hover {
+    background: rgba(34,50,84,0.03);
+}
+
+.inp input:not(:placeholder-shown) + span {
+    color: #5a667f;
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus {
+    background: none;
+    outline: none;
+}
+
+.inp input:focus + span {
+    color: #07f;
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus + span + .border {
+    transform: scaleX(1);
+}
+
+
+.modal2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: block;
+    overflow: hidden;
+}
+
+.modal-content2{
+    background-color: white;
+    font-size: 20px;
+    margin: 15% auto;
+    padding: 20px;
+    height: 30%;
+    width: 25%;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 7px 20px rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+
+.lableHolder{
+    width: 85%;
+    margin: auto;
+
+}
