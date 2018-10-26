@@ -12,3 +12,5 @@ I have used these technologies in the project:
 -Spring.
 
 Bot allows users to make orders, talk to operators and save users data.
+I have removed telegram bot token for security reasons.
+To test this bot you will need to add you own bot token
